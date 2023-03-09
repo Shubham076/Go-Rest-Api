@@ -1,0 +1,34 @@
+{
+  "app": {
+    "port": ""
+  },
+  "rds": {
+    "port": "",
+    "user": "",
+    "password": "",
+    "protocol": "tcp",
+    "db": "",
+    "host": ""
+  },
+  "mq": {
+    "host": "",
+    "user": "",
+    "pass": ""
+  },
+  "otp": {
+    "max": 999999,
+    "min": 100000,
+    "expiry": 120
+  },
+  "email": {
+    "sender": "",
+    "text_body": "This email was sent with Amazon SES"
+  },
+  "aws": {
+    "region": "ap-south-1",
+    "profile": "default"
+  },
+  "session": {
+    "expiry": 14400
+  }
+}
