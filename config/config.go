@@ -15,10 +15,14 @@ func LoadConfig() (*Config, error) {
 	v.AutomaticEnv()
 
 	env := v.Get("ENV").(string)
-
+	configPath := v.Get("CONFIG_PATH").(string)
 	v.SetConfigName(env)
 	v.SetConfigType("json")
 	v.AddConfigPath("./config/")
+
+	if len(configPath) != 0 {
+		v.AddConfigPath(configPath)
+	}
 
 	err := v.ReadInConfig()
 	if err != nil {

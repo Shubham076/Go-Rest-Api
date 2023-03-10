@@ -24,7 +24,8 @@ func main() {
 	logger.Init()
 	conf, err := config.LoadConfig()
 	if err != nil {
-		logger.Error.Println("Error during loading config file: %v", err)
+		logger.Error.Printf("Error during loading config file: %v", err)
+		return
 	}
 	rds.Connect()
 	rds.CreateTables()
